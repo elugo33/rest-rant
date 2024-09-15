@@ -19,14 +19,10 @@ placeSchema.methods.showEstablished = function() {
   return `${this.name} has been serving ${this.city}, ${this.state} since ${this.founded}.`;
 };
 
-
-const Place = mongoose.model('Place', placeSchema);
-
-
-module.exports = Place;
+module.exports = mongoose.model('Place', placeSchema);
 
 
-module.exports = Place;
+module.exports = mongoose.model('Place', placeSchema);
 
   
 
@@ -34,10 +30,10 @@ module.exports = Place;
     return `${this.name} has been serving ${this.city}, ${this.state} since ${this.founded}.`;
   };
 
-  const Place = mongoose.model('Place', placeSchema);
+  let Place = mongoose.model('Place', placeSchema);
   
 
-  module.exports = Place;
+  module.exports = mongoose.model('Place', placeSchema);
   const placeSchema = new mongoose.Schema({
     name: { type: String, required: true },
     pic: { type: String, default: 'http://placekitten.com/350/350' },
